@@ -1,5 +1,5 @@
 {
-	"name": "mr-jingles/client",
+	"name": "mr-jingles/client-php",
 	"type" : "magento-module",
 	"description": "Client for the WordPress JSON REST API",
 	"license": "GPL",
