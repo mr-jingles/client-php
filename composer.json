@@ -1,10 +1,10 @@
 {
-	"name": "wp-api/client",
+	"name": "mr-jingles/client",
+	"type" : "magento-module",
 	"description": "Client for the WordPress JSON REST API",
 	"license": "GPL",
 	"require": {
 		"rmccue/requests": "~1.6",
-		"justinrainbow/json-schema": "dev-master",
 		"magento-hackathon/magento-composer-installer" : "*"
 	}
 }
