@@ -1,1 +1,2 @@
-library  lib/WPAPI
+library/WPAPI       lib/WPAPI
+library/WPAPI.php   lib/WPAPI.php
