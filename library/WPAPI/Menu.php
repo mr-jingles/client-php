@@ -14,6 +14,12 @@
  */
 class WPAPI_Menu {
 	/**
+	 * API handler
+	 *
+	 * @var WPAPI
+	 */
+	protected $api;
+	/**
 	 * Data container
 	 *
 	 * @var array
@@ -25,7 +31,16 @@ class WPAPI_Menu {
 	 * @var array
 	 */
 	protected $changed = array();
-	
+	/**
+	 * Constructor
+	 *
+	 * @param WPAPI $api API object
+	 * @param array $data Data to initialise the object with
+	 */
+	public function __construct($api, $data = array()) {
+		$this->api = $api;
+		$this->data = (array) $data;
+	}
 	/**
 	 * Get a property
 	 *
