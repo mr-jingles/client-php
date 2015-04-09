@@ -1,4 +1,3 @@
-
 <?php
 /**
  * Menu entity object
