@@ -111,8 +111,17 @@ class WPAPI {
 	 */
 	public function getDefaultOptions() {
 		$options = array();
+		/*
 		if ( ! empty( $this->auth ) )
 			$options['auth'] = $this->auth;
+		*/
+		return $options;
+	}
+
+	public function getDefaultHeaders() {
+		$options = array();
+		if ( ! empty( $this->auth ) )
+			$options['Authorization'] = "Basic ".base64_encode($this->auth[0].':'.$this->auth[1]);
 
 		return $options;
 	}
@@ -174,6 +183,7 @@ class WPAPI {
 	public function request($endpoint, $headers = array(), $data = array(), $type = Requests::GET, $options = array()) {
 		$url = $this->base . $endpoint;
 		$options = array_merge($this->getDefaultOptions(), $options);
+		$headers = array_merge($this->getDefaultHeaders(), $headers);
 		return Requests::request($url, $headers, $data, $type, $options);
 	}
 	/**#@-*/
